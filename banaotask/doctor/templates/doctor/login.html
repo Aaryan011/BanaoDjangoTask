@@ -1,0 +1,46 @@
+{% load static %}
+<html>
+  <head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'doctor\assets\css\login.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        {% if error_message %}
+        <p class="error">{{ error_message }}</p>
+      {% endif %}
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <div class="show-password">
+          <input type="checkbox" onclick="myFunction()">Show Password
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div class="signup-link">
+          Don't have an account? <a href="{% url 'signup' %}">Sign up</a>
+        </div>
+      </form>
+    </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+    </script>
+  </body>
+</html>

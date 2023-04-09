@@ -1,0 +1,31 @@
+{% load static %}
+<html>
+<head>
+	<title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="{% static 'doctor\assets\css\doc-dashboard.css' %}">
+	
+</head>
+<body>
+	<div id="header">
+		<h1>Doctor Dashboard</h1>
+		<a href="{% url 'login'%}">Logout</a>
+	</div>
+	
+	
+	<div id="content">
+		<h2>Hello, {{ did.firstname }}</h2>
+		<h3>Personal Details:-</h3>
+        <img src= {{ did.profile_pic.url }} class="profile-pic" alt="Profile Picture">
+
+		<p>Firstname :- {{ did.firstname }}
+		<p>Lastname :- {{ did.lastname }}
+		<p>Email:- {{ uid.email }}
+		<p>Username:- {{ uid.username }}
+		<p>Address:- {{ did.address }}
+		<p>City:- {{ did.city }}
+		<p>State:- {{ did.state }}
+		<p>Pincode:- {{ did.pincode }}	
+		
+	</div>
+</body>
+</html>

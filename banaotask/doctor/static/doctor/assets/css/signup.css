@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+  }
+  .container {
+    margin: auto;
+    max-width: 500px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  h2 {
+    text-align: center;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  button[type="submit"] {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  button[type="submit"]:hover {
+    background-color: darkblue;
+  }
+
+  label[for="role"] {
+    display: block;
+    margin-top: 10px;
+}
+
+select#role {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.error{
+  color: red;
+  font-size: 16px;
+  margin-bottom: 10px;
+  
+}
